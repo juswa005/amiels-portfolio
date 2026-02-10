@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Meta tags for responsive design and character encoding -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Page title -->
+    <title>Amiel Josh Basug | Software Engineer & Cybersecurity Analyst</title>
+    
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Google Fonts: JetBrains Mono for code/terminal look, Inter for general text -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- ============================================
+         MATRIX RAIN BACKGROUND CANVAS
+         Creates the falling code effect in background
+         ============================================ -->
+    <canvas id="matrix-canvas"></canvas>
+
+    <!-- ============================================
+         NAVIGATION BAR
+         Fixed position, contains logo and menu links
+         ============================================ -->
+    <nav class="navbar">
+        <!-- Logo/Brand -->
+        <div class="nav-brand">Amiel</div>
+        
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li><a href="#home" class="nav-link">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#exposure" class="nav-link">Exposure</a></li>
+            <li><a href="#certificates" class="nav-link">Certificates</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        
+        <!-- Hamburger menu for mobile -->
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION (HOME)
+         First section with terminal animation and name
+         ============================================ -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <!-- Terminal window with typing animation -->
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-buttons">
+                        <span class="btn close"></span>
+                        <span class="btn minimize"></span>
+                        <span class="btn maximize"></span>
+                    </div>
+                    <div class="terminal-title">root@amiel:~</div>
+                </div>
+                <div class="terminal-body">
+                    <p class="line">
+                        <span class="prompt">$</span> 
+                        <span class="command" id="type-text"></span>
+                        <span class="cursor">_</span>
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Main hero text -->
+            <div class="hero-text">
+                <h1 class="glitch" data-text="Amiel Josh Basug">Amiel Josh Basug</h1>
+                <p class="subtitle">Computer Engineering Student | Aspiring Software Engineer & Cybersecurity Analyst</p>
+                
+                <!-- CTA Buttons -->
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn-primary">View Projects</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll down indicator -->
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <p>Scroll to explore</p>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT SECTION
+         Contains photo grid and bio information
+         ============================================ -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            
+            <div class="about-content">
+                <!-- Photo Grid -->
+                <div class="about-photos">
+                    <div class="photo-grid">
+                        <!-- Main photo - larger, rotated left -->
+                        <div class="photo-container main-photo">
+                            <img src="images/your-photo-1.jpg" alt="Amiel Josh Basug" class="about-img">
+                            <div class="photo-frame"></div>
+                        </div>
+                        
+                        <!-- Secondary photo - smaller, rotated right -->
+                        <div class="photo-container secondary-photo">
+                            <img src="images/your-photo-2.jpg" alt="Amiel at work" class="about-img">
+                            <div class="photo-frame"></div>
+                        </div>
+                        
+                        <!-- Decorative glowing accent -->
+                        <div class="photo-accent"></div>
+                    </div>
+                </div>
+                
+                <!-- Bio Text -->
+                <div class="about-text">
+                    <p class="highlight">
+                        Currently a <span class="accent">3rd Year Computer Engineering</span> student at 
+                        <span class="accent">University of Saint Louis Tuguegarao</span>.
+                    </p>
+                    <p>
+                        I'm passionate about building robust software solutions and securing digital infrastructures. 
+                        My journey spans from low-level embedded systems to high-level application development, 
+                        with a growing focus on cybersecurity and ethical hacking.
+                    </p>
+                    <p>
+                        When I'm not coding, you'll find me exploring Linux distros, configuring my Arch setup, 
+                        or diving deep into network security protocols.
+                    </p>
+                    
+                    <!-- Stats counters -->
+                    <div class="stats">
+                        <div class="stat">
+                            <span class="stat-number">3</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">4</span>
+                            <span class="stat-label">GitHub Projects</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">∞</span>
+                            <span class="stat-label">Coffee Consumed</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS SECTION
+         Left: Progress bars | Right: Circular indicators
+         ============================================ -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Arsenal</h2>
+            <p class="section-subtitle">Proficiency levels based on project experience</p>
+            
+            <div class="skills-container">
+                <!-- LEFT COLUMN: Linear Progress Bars -->
+                <div class="skills-column">
+                    <h3 class="skills-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                        Programming & Systems
+                    </h3>
+                    
+                    <!-- Skill Bar 1 -->
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <span class="skill-name">Linux (Arch/Debian/Kali)</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Bar 2 -->
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <span class="skill-name">C / C++</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Bar 3 -->
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <span class="skill-name">Python</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="80"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Bar 4 -->
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <span class="skill-name">Bash & CLI Tooling</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Bar 5 -->
+                    <div class="skill-bar-container">
+                        <div class="skill-info">
+                            <span class="skill-name">C# & .NET</span>
+                            <span class="skill-percent">75%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="75"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN: Circular Progress Indicators -->
+                <div class="skills-column">
+                    <h3 class="skills-category-title">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                        Specialized Skills
+                    </h3>
+                    
+                    <div class="circular-skills">
+                        <!-- Circular Skill 1 -->
+                        <div class="circular-skill" data-percent="85">
+                            <svg class="circle-svg" viewBox="0 0 100 100">
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-content">
+                                <span class="circle-percent">85%</span>
+                                <span class="circle-label">Git & GitHub</span>
+                            </div>
+                        </div>
+
+                        <!-- Circular Skill 2 -->
+                        <div class="circular-skill" data-percent="80">
+                            <svg class="circle-svg" viewBox="0 0 100 100">
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-content">
+                                <span class="circle-percent">80%</span>
+                                <span class="circle-label">Embedded/Arduino</span>
+                            </div>
+                        </div>
+
+                        <!-- Circular Skill 3 -->
+                        <div class="circular-skill" data-percent="70">
+                            <svg class="circle-svg" viewBox="0 0 100 100">
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-content">
+                                <span class="circle-percent">70%</span>
+                                <span class="circle-label">Networking</span>
+                            </div>
+                        </div>
+
+                        <!-- Circular Skill 4 -->
+                        <div class="circular-skill" data-percent="65">
+                            <svg class="circle-svg" viewBox="0 0 100 100">
+                                <circle class="circle-bg" cx="50" cy="50" r="45"></circle>
+                                <circle class="circle-progress" cx="50" cy="50" r="45"></circle>
+                            </svg>
+                            <div class="circle-content">
+                                <span class="circle-percent">65%</span>
+                                <span class="circle-label">Cybersecurity</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Tags -->
+            <div class="tech-stack">
+                <h3>Technologies I Work With</h3>
+                <div class="tech-tags">
+                    <span class="tech-tag-large">Linux</span>
+                    <span class="tech-tag-large">C</span>
+                    <span class="tech-tag-large">C++</span>
+                    <span class="tech-tag-large">Python</span>
+                    <span class="tech-tag-large">C#</span>
+                    <span class="tech-tag-large">Git</span>
+                    <span class="tech-tag-large">Arduino</span>
+                    <span class="tech-tag-large">ESP32</span>
+                    <span class="tech-tag-large">Bash</span>
+                    <span class="tech-tag-large">HTML/CSS</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EXPOSURE SECTION
+         Non-clickable cards showing experiences/events
+         ============================================ -->
+    <section id="exposure" class="exposure">
+        <div class="container">
+            <h2 class="section-title">Exposure & Experience</h2>
+            <p class="section-subtitle">Hackathons, competitions, and hands-on experiences</p>
+            
+            <div class="exposure-grid">
+                <!-- Exposure Card 1 -->
+                <div class="exposure-card">
+                    <div class="exposure-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                        </svg>
+                    </div>
+                    <div class="exposure-content">
+                        <span class="exposure-date">2024</span>
+                        <h3>Cybersecurity Workshop</h3>
+                        <p>Intensive hands-on training in penetration testing and vulnerability assessment using Kali Linux tools.</p>
+                        <div class="exposure-tags">
+                            <span>Penetration Testing</span>
+                            <span>Kali Linux</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exposure Card 2 -->
+                <div class="exposure-card">
+                    <div class="exposure-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <div class="exposure-content">
+                        <span class="exposure-date">2023</span>
+                        <h3>Embedded Systems Competition</h3>
+                        <p>Developed an IoT-based monitoring system using Arduino and ESP32 for smart agriculture.</p>
+                        <div class="exposure-tags">
+                            <span>IoT</span>
+                            <span>Arduino</span>
+                            <span>ESP32</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exposure Card 3 -->
+                <div class="exposure-card">
+                    <div class="exposure-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <div class="exposure-content">
+                        <span class="exposure-date">2023</span>
+                        <h3>Open Source Contribution</h3>
+                        <p>Contributed to Linux documentation and CLI tool improvements on GitHub.</p>
+                        <div class="exposure-tags">
+                            <span>Open Source</span>
+                            <span>Git</span>
+                            <span>Documentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Exposure Card 4 -->
+                <div class="exposure-card">
+                    <div class="exposure-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                        </svg>
+                    </div>
+                    <div class="exposure-content">
+                        <span class="exposure-date">2024</span>
+                        <h3>Networking Seminar</h3>
+                        <p>Advanced networking concepts and Cisco packet tracer simulations workshop.</p>
+                        <div class="exposure-tags">
+                            <span>Networking</span>
+                            <span>Cisco</span>
+                            <span>Infrastructure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATES SECTION
+         Clickable cards that open modal with full certificate
+         ============================================ -->
+    <section id="certificates" class="certificates">
+        <div class="container">
+            <h2 class="section-title">Certifications</h2>
+            <p class="section-subtitle">Click to view credentials</p>
+            
+            <div class="certificates-grid">
+                <!-- Certificate 1 -->
+                <div class="certificate-card" onclick="openCertificate('cert1')">
+                    <div class="certificate-preview">
+                        <div class="certificate-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                        </div>
+                        <div class="certificate-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Certified Ethical Hacker (CEH)</h3>
+                        <p class="cert-issuer">EC-Council</p>
+                        <p class="cert-date">Issued: 2024</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 2 -->
+                <div class="certificate-card" onclick="openCertificate('cert2')">
+                    <div class="certificate-preview">
+                        <div class="certificate-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                        </div>
+                        <div class="certificate-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Cisco Certified Network Associate</h3>
+                        <p class="cert-issuer">Cisco</p>
+                        <p class="cert-date">Issued: 2023</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 3 -->
+                <div class="certificate-card" onclick="openCertificate('cert3')">
+                    <div class="certificate-preview">
+                        <div class="certificate-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="4" y="5" width="16" height="16" rx="2" ry="2"></rect>
+                                <line x1="16" y1="3" x2="16" y2="7"></line>
+                                <line x1="8" y1="3" x2="8" y2="7"></line>
+                                <line x1="4" y1="11" x2="20" y2="11"></line>
+                            </svg>
+                        </div>
+                        <div class="certificate-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Python for Data Science</h3>
+                        <p class="cert-issuer">DataCamp</p>
+                        <p class="cert-date">Issued: 2023</p>
+                    </div>
+                </div>
+
+                <!-- Certificate 4 -->
+                <div class="certificate-card" onclick="openCertificate('cert4')">
+                    <div class="certificate-preview">
+                        <div class="certificate-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="certificate-overlay">
+                            <span>View Certificate</span>
+                        </div>
+                    </div>
+                    <div class="certificate-info">
+                        <h3>Linux Administration</h3>
+                        <p class="cert-issuer">Linux Foundation</p>
+                        <p class="cert-date">Issued: 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATE MODAL/LIGHTBOX
+         Hidden by default, shown when certificate clicked
+         ============================================ -->
+    <div id="certificateModal" class="modal">
+        <div class="modal-content">
+            <!-- Close button -->
+            <span class="close-modal" onclick="closeCertificate()">&times;</span>
+            
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h2 id="modalTitle">Certificate Title</h2>
+                <p id="modalIssuer">Issuer Name</p>
+            </div>
+            
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <!-- Certificate Image -->
+                <img id="modalImage" src="" alt="Certificate">
+                
+                <!-- Certificate Details -->
+                <div class="modal-details">
+                    <p id="modalDescription">Certificate description and details go here.</p>
+                    
+                    <!-- Verify Button - Opens in new tab -->
+                    <a id="modalVerify" href="#" target="_blank" rel="noopener noreferrer" class="btn-verify">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width: 16px; height: 16px; vertical-align: middle; margin-right: 8px;">
+                            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                            <polyline points="15 3 21 3 21 9"></polyline>
+                            <line x1="10" y1="14" x2="21" y2="3"></line>
+                        </svg>
+                        Verify Credential
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PROJECTS SECTION
+         GitHub project cards with links
+         ============================================ -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Check out my work on GitHub</p>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <a href="https://github.com/juswa005/project-1" target="_blank" class="project-card" data-tilt>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="external-links">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Project Alpha</h3>
+                    <p class="project-description">Description of your first project. This could be an embedded systems project, security tool, or application.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Arduino</span>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="https://github.com/juswa005/project-2" target="_blank" class="project-card" data-tilt>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="external-links">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Project Beta</h3>
+                    <p class="project-description">Your second project description. Maybe a Python automation script or networking tool.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Linux</span>
+                    </div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="https://github.com/juswa005/project-3" target="_blank" class="project-card" data-tilt>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="external-links">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Project Gamma</h3>
+                    <p class="project-description">Third project showcase. Could be a C# application or cybersecurity-related project.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C#</span>
+                        <span class="tech-tag">.NET</span>
+                    </div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="https://github.com/juswa005/project-4" target="_blank" class="project-card" data-tilt>
+                    <div class="project-header">
+                        <div class="folder-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <div class="external-links">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                <polyline points="15 3 21 3 21 9"></polyline>
+                                <line x1="10" y1="14" x2="21" y2="3"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Project Delta</h3>
+                    <p class="project-description">Your fourth project. Perhaps a web application or ESP32 IoT project.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">ESP32</span>
+                        <span class="tech-tag">IoT</span>
+                        <span class="tech-tag">C++</span>
+                    </div>
+                </a>
+            </div>
+            
+            <!-- GitHub CTA Button -->
+            <div class="github-cta">
+                <a href="https://github.com/juswa005" target="_blank" class="btn-github">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                    </svg>
+                    View All Projects on GitHub
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+         Contact info and terminal visual
+         ============================================ -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Let's collaborate on something amazing</p>
+            
+            <div class="contact-content">
+                <!-- Contact Info -->
+                <div class="contact-text">
+                    <p>
+                        I'm currently open for internships, freelance projects, and collaboration opportunities. 
+                        Whether you want to discuss embedded systems, cybersecurity, or just want to say hi, 
+                        my inbox is always open!
+                    </p>
+                    
+                    <div class="contact-info">
+                        <!-- Email -->
+                        <a href="mailto:amieljosh05@gmail.com" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="label">Email</span>
+                                <span class="value">amieljosh05@gmail.com</span>
+                            </div>
+                        </a>
+                        
+                        <!-- GitHub -->
+                        <a href="https://github.com/juswa005" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="label">GitHub</span>
+                                <span class="value">@juswa005</span>
+                            </div>
+                        </a>
+                        
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/amiel-josh-basug" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="label">LinkedIn</span>
+                                <span class="value">Amiel Josh Basug</span>
+                            </div>
+                        </a>
+                        
+                        <!-- Facebook -->
+                        <a href="https://facebook.com/amiel.josh.basug" target="_blank" class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <span class="label">Facebook</span>
+                                <span class="value">Amiel Josh Basug</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Terminal Visual -->
+                <div class="contact-visual">
+                    <div class="terminal-contact">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn close"></span>
+                                <span class="btn minimize"></span>
+                                <span class="btn maximize"></span>
+                            </div>
+                            <div class="terminal-title">contact.sh</div>
+                        </div>
+                        <div class="terminal-body">
+                            <p><span class="prompt">$</span> ./send_message.sh</p>
+                            <p class="output">Initializing contact protocol...</p>
+                            <p class="output">Ready to receive transmission_</p>
+                            <div class="typing-animation">
+                                <span class="prompt">$</span> echo "Let's work together!"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+         Copyright and credits
+         ============================================ -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">
+                Designed & Built by <span class="accent">Amiel Josh Basug</span>
+            </p>
+            <p class="footer-copyright">
+                © 2025 All rights reserved. | Made with ❤️ and lots of ☕
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
