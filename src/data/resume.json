@@ -1,0 +1,151 @@
+{
+  "name": "Amiel Josh Basug",
+  "tagline": "COMPUTER ENGINEER (in the making)",
+  "summary": "I am Amiel, a Computer Engineering student focused on building reliable software, from embedded systems to full-stack applications and AI. I enjoy diving into Linux internals and self-hosted infrastructure.",
+  "experience": [],
+  "education": [
+    {
+      "institution": "University of Saint Louis Tuguegarao",
+      "degree": "BS Computer Engineering",
+      "duration": "Aug 2023 - Present",
+      "details": "Relevant Coursework: Data Structures & Algorithms, Software Design, Electronics & Electrical Circuits, Computer Network Security, Artificial Intelligence / Machine Learning"
+    },
+    {
+      "institution": "Lal-lo National High School",
+      "degree": "STEM Graduate | High Honors",
+      "duration": "Sep 2021 - Jul 2023",
+      "details": ""
+    }
+  ],
+  "skills": {
+    "programmingLanguages": ["C", "C++", "C#", "Python", "HTML", "CSS", "XAML", "Bash Scripting"],
+    "frameworks": [],
+    "operatingSystems": ["Linux (Arch, Ubuntu)"],
+    "embeddedAndHardware": ["Arduino", "ESP32", "Raspberry PI", "sensors", "circuit design"],
+    "toolsAndSystems": ["Git", "GitHub", "Networking", "Databases", "Wayland", "Hyprland"]
+  },
+  "projects": [
+    {
+      "title": "Arduino MAX7219 6-Digit Timer",
+      "stack": ["C++", "Arduino Uno", "MAX7219"],
+      "description": "Designed a modular count-up/count-down timer using multiplexed 7-segment displays. Integrated debouncing logic, buzzer alerts, and optional LCD display support.",
+      "year": "",
+      "status": "Completed",
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "Sentry - RFID Attendance System",
+      "stack": ["C#", "C++", "Arduino Uno", "RFID"],
+      "description": "Built a desktop + hardware-integrated attendance system with real-time RFID logging. Implemented serial communication for automated Time-In/Time-Out tracking between Arduino and C# application.",
+      "year": "",
+      "status": "Completed",
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "Home Server Stack",
+      "stack": ["Ubuntu", "Linux Networking"],
+      "description": "Developed a self-hosted home server environment for local cloud services and system automation. Configured networking, service deployment, and system monitoring for personal infrastructure use.",
+      "year": "",
+      "status": "Completed",
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "Orbital WiFi (Wireless Network Utility Tool)",
+      "stack": ["C", "C++", "Linux Networking"],
+      "description": "Developed a wireless network utility for scanning and analyzing nearby WiFi environments. Implemented low-level network interaction logic for signal detection and monitoring.",
+      "year": "",
+      "status": "Completed",
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "Orbital Speedtest (Network Performance Analyzer)",
+      "stack": ["Python", "Bash", "Networking Tools"],
+      "description": "Built a network speed testing tool to measure bandwidth, latency, and connection stability. Automated repeated network performance tests for diagnostics and analysis.",
+      "year": "",
+      "status": "Completed",
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "C++ Archives (DSA Practice Repository)",
+      "stack": ["C++"],
+      "description": "Implemented data structures and algorithms for problem-solving and coding practice.",
+      "year": "",
+      "status": "Completed",
+      "github": "",
+      "demo": ""
+    },
+    {
+      "title": "Amiels Portfolio Website",
+      "stack": ["HTML", "CSS", "JavaScript"],
+      "description": "Designed and deployed a responsive personal portfolio showcasing projects and technical skills.",
+      "year": "",
+      "status": "Completed",
+      "github": "",
+      "demo": "https://amiels-portfolio.vercel.app"
+    }
+  ],
+  "awards": [],
+  "certifications": [
+    {
+      "name": "Google Foundations of Cybersecurity",
+      "issuer": "Coursera",
+      "date": "Jun 2026"
+    },
+    {
+      "name": "Google AI Professional",
+      "issuer": "Coursera",
+      "date": "Jun 2026"
+    },
+    {
+      "name": "Google AI Fundamentals",
+      "issuer": "Coursera",
+      "date": "Apr 2026"
+    },
+    {
+      "name": "Google AI Essentials",
+      "issuer": "Coursera",
+      "date": "Feb 2026"
+    },
+    {
+      "name": "Introduction to Cybersecurity",
+      "issuer": "CISCO Networking Academy",
+      "date": "Feb 2026"
+    },
+    {
+      "name": "Operating Systems Basics",
+      "issuer": "CISCO Networking Academy",
+      "date": "Nov 2025"
+    },
+    {
+      "name": "Python Essentials 1 and 2",
+      "issuer": "CISCO Networking Academy",
+      "date": "Nov 2025"
+    },
+    {
+      "name": "Civil Service Commission Passer (Professional Level)",
+      "issuer": "Civil Service Commission",
+      "date": "Mar 2025"
+    },
+    {
+      "name": "Computer Systems Servicing NC II",
+      "issuer": "TESDA",
+      "date": "Aug 2024"
+    }
+  ],
+  "organizations": [],
+  "contact": {
+    "phone": "09628247241",
+    "email": "amieljosh05@gmail.com",
+    "address": "Paranum, Lal-lo, Cagayan"
+  },
+  "links": {
+    "linkedin": "https://linkedin.com/in/amieljoshbasug",
+    "github": "https://github.com/juswa005",
+    "portfolio": "https://amiels-portfolio.vercel.app"
+  }
+}
